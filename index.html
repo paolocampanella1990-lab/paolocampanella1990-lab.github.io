@@ -174,16 +174,23 @@ svg.filo circle{fill:var(--filo);stroke:#fff;stroke-width:3}
 footer a{color:var(--ink);font-weight:600}
 footer{background:var(--lav);color:var(--muted);font-size:14px;padding:34px 0;text-align:center}
 
-/* ---------- telefono ---------- */
+/* ---------- telefono ----------
+   La fattura resta ferma in alto, DIETRO; i testi sono schede bianche che le scorrono SOPRA (sempre leggibili).
+   Senza animazione: fattura e testi uno sotto l'altro, normali. */
 @media(max-width:860px){
   .racconto .grid{grid-template-columns:1fr;gap:0}
-  .palco-col{order:-1;position:relative;z-index:4;background:var(--paper)}
-  .js .palco-col{position:sticky;top:58px;height:54vh;box-shadow:0 14px 20px -12px #2f2b3d1f}
+  .palco-col{order:-1;position:relative;z-index:1;background:var(--paper)}
+  .js .palco-col{position:sticky;top:58px;height:62vh;background:transparent}
   .palco{position:relative;top:0;padding:70px 0 200px}
-  .js .palco{height:54vh;padding:0}
+  .js .palco{height:62vh;padding:0}
   .carta{transform-origin:center}
-  .passi{padding-left:30px}
-  .passo{min-height:70vh;justify-content:flex-end;padding-bottom:12vh}
+  .passi{padding-left:24px;position:relative;z-index:3}
+  .js .passi{margin-top:-62vh}
+  .passo{min-height:auto;padding:18px 0}
+  .js .passo{min-height:100vh;justify-content:flex-end;padding:0 0 4vh;opacity:1}
+  .js .passo .testo{background:rgba(255,255,255,.97);border:1px solid var(--line);border-radius:20px;padding:18px 20px;box-shadow:0 16px 40px #2f2b3d24}
+  .passo h2{font-size:28px}
+  .passo p{font-size:16px}
   .salv{right:-18px;width:170px;bottom:auto;top:-34px}
   .cons{left:-22px;width:220px;bottom:auto;top:46%}
   .ts{bottom:-40px}
@@ -229,12 +236,12 @@ footer{background:var(--lav);color:var(--muted);font-size:14px;padding:34px 0;te
 <section class="racconto" id="racconto">
   <div class="wrap grid">
     <div class="passi">
-      <article class="passo" data-p="1"><span class="n">uno</span><h2>Tutto comincia da una seduta.</h2><p>La segni in agenda, con il colore del tipo e del luogo. Il giorno prima il paziente riceve il promemoria, per email o WhatsApp.</p></article>
-      <article class="passo" data-p="2"><span class="n">due</span><h2>La fattura si scrive da sola.</h2><p>Dalla seduta, un clic: numero, dati del paziente, prestazione e importo sono già lì. Nel tuo modello, con la tua intestazione.</p></article>
-      <article class="passo" data-p="3"><span class="n">tre</span><h2>Bollo e bonus psicologo, senza pensarci.</h2><p>Sopra i 77,47 € la marca da bollo si aggiunge da sola. Il bonus psicologo e il contributo ENPAP sono già calcolati.</p></article>
-      <article class="passo" data-p="4"><span class="n">quattro</span><h2>Dritta al Sistema Tessera Sanitaria.</h2><p>Il programma cifra la spesa e la invia con le tue credenziali. Tu guardi solo l'esito: accolta.</p></article>
-      <article class="passo" data-p="5"><span class="n">cinque</span><h2>Le tasse, prima che arrivino.</h2><p>Quanto mettere da parte ogni mese, quando pagare imposta ed ENPAP, con le regole del forfettario. Stime chiare da confrontare con il commercialista.</p></article>
-      <article class="passo" data-p="6"><span class="n">sei</span><h2>E il consenso? Firmato a distanza.</h2><p>Il paziente riceve il modulo per email e risponde ACCETTO con il suo codice personale. Il programma prepara l'attestazione e la archivia nella sua scheda.</p></article>
+      <article class="passo" data-p="1"><div class="testo"><span class="n">uno</span><h2>Tutto comincia da una seduta.</h2><p>La segni in agenda, con il colore del tipo e del luogo. Il giorno prima il paziente riceve il promemoria, per email o WhatsApp.</p></div></article>
+      <article class="passo" data-p="2"><div class="testo"><span class="n">due</span><h2>La fattura si scrive da sola.</h2><p>Dalla seduta, un clic: numero, dati del paziente, prestazione e importo sono già lì. Nel tuo modello, con la tua intestazione.</p></div></article>
+      <article class="passo" data-p="3"><div class="testo"><span class="n">tre</span><h2>Bollo e bonus psicologo, senza pensarci.</h2><p>Sopra i 77,47 € la marca da bollo si aggiunge da sola. Il bonus psicologo e il contributo ENPAP sono già calcolati.</p></div></article>
+      <article class="passo" data-p="4"><div class="testo"><span class="n">quattro</span><h2>Dritta al Sistema Tessera Sanitaria.</h2><p>Il programma cifra la spesa e la invia con le tue credenziali. Tu guardi solo l'esito: accolta.</p></div></article>
+      <article class="passo" data-p="5"><div class="testo"><span class="n">cinque</span><h2>Le tasse, prima che arrivino.</h2><p>Quanto mettere da parte ogni mese, quando pagare imposta ed ENPAP, con le regole del forfettario. Stime chiare da confrontare con il commercialista.</p></div></article>
+      <article class="passo" data-p="6"><div class="testo"><span class="n">sei</span><h2>E il consenso? Firmato a distanza.</h2><p>Il paziente riceve il modulo per email e risponde ACCETTO con il suo codice personale. Il programma prepara l'attestazione e la archivia nella sua scheda.</p></div></article>
     </div>
     <div class="palco-col">
       <div class="palco on1 on2 on3 on4 on5 on6" id="palco">
@@ -265,12 +272,12 @@ footer{background:var(--lav);color:var(--muted);font-size:14px;padding:34px 0;te
   <div class="gal-sticky">
     <div class="gal-testa"><span class="eyebrow">Dentro il programma</span><h2>Quello che vedrai <em>ogni giorno</em>.</h2></div>
     <div class="traccia" id="traccia">
-      <div class="schermo"><div class="cornice"><div class="barretta"><i></i><i></i><i></i></div><img src="agenda.jpg" alt="Agenda della settimana" loading="lazy"></div><p><b>Agenda.</b> La settimana, le sedute di oggi e le cose da fare.</p></div>
-      <div class="schermo"><div class="cornice"><div class="barretta"><i></i><i></i><i></i></div><img src="nuova-fattura.jpg" alt="Nuova fattura" loading="lazy"></div><p><b>Nuova fattura.</b> A sinistra i dati, a destra la fattura com'è.</p></div>
-      <div class="schermo"><div class="cornice"><div class="barretta"><i></i><i></i><i></i></div><img src="sistema-ts.jpg" alt="Sistema Tessera Sanitaria" loading="lazy"></div><p><b>Sistema TS.</b> Le spese da inviare, in ordine, con un tasto.</p></div>
-      <div class="schermo"><div class="cornice"><div class="barretta"><i></i><i></i><i></i></div><img src="guadagni.jpg" alt="Guadagni" loading="lazy"></div><p><b>Guadagni.</b> Quanto incassi e quanto ti resta davvero.</p></div>
-      <div class="schermo"><div class="cornice"><div class="barretta"><i></i><i></i><i></i></div><img src="tasse.jpg" alt="Tasse e contributi" loading="lazy"></div><p><b>Tasse.</b> Se sei in regola e il prossimo pagamento.</p></div>
-      <div class="schermo"><div class="cornice"><div class="barretta"><i></i><i></i><i></i></div><img src="consenso.jpg" alt="Consenso a distanza" loading="lazy"></div><p><b>Consenso.</b> Paziente, coppia o minori: firma a distanza.</p></div>
+      <div class="schermo"><div class="cornice"><div class="barretta"><i></i><i></i><i></i></div><img src="immagini/agenda.jpg" alt="Agenda della settimana" loading="lazy"></div><p><b>Agenda.</b> La settimana, le sedute di oggi e le cose da fare.</p></div>
+      <div class="schermo"><div class="cornice"><div class="barretta"><i></i><i></i><i></i></div><img src="immagini/nuova-fattura.jpg" alt="Nuova fattura" loading="lazy"></div><p><b>Nuova fattura.</b> A sinistra i dati, a destra la fattura com'è.</p></div>
+      <div class="schermo"><div class="cornice"><div class="barretta"><i></i><i></i><i></i></div><img src="immagini/sistema-ts.jpg" alt="Sistema Tessera Sanitaria" loading="lazy"></div><p><b>Sistema TS.</b> Le spese da inviare, in ordine, con un tasto.</p></div>
+      <div class="schermo"><div class="cornice"><div class="barretta"><i></i><i></i><i></i></div><img src="immagini/guadagni.jpg" alt="Guadagni" loading="lazy"></div><p><b>Guadagni.</b> Quanto incassi e quanto ti resta davvero.</p></div>
+      <div class="schermo"><div class="cornice"><div class="barretta"><i></i><i></i><i></i></div><img src="immagini/tasse.jpg" alt="Tasse e contributi" loading="lazy"></div><p><b>Tasse.</b> Se sei in regola e il prossimo pagamento.</p></div>
+      <div class="schermo"><div class="cornice"><div class="barretta"><i></i><i></i><i></i></div><img src="immagini/consenso.jpg" alt="Consenso a distanza" loading="lazy"></div><p><b>Consenso.</b> Paziente, coppia o minori: firma a distanza.</p></div>
     </div>
   </div>
 </section>
