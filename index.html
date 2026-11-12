@@ -346,6 +346,23 @@ svg.filo circle{fill:var(--filo);stroke:#fff;stroke-width:3}
 footer a{color:var(--ink);font-weight:600}
 footer{background:var(--lav);color:var(--muted);font-size:14px;padding:34px 0;text-align:center}
 
+/* ---------- riquadro "come preferisci scriverci?" ---------- */
+dialog.scelta{border:0;border-radius:26px;padding:34px 30px 24px;max-width:520px;width:calc(100% - 32px);background:var(--paper);color:var(--ink);box-shadow:0 40px 90px #2f2b3d40}
+dialog.scelta::backdrop{background:#2f2b3d59;backdrop-filter:blur(3px)}
+dialog.scelta h3{font-family:var(--serif);font-weight:400;font-size:32px;line-height:1.1;margin:8px 0 8px}
+dialog.scelta .sotto{color:var(--muted);margin:0 0 20px;font-size:16px}
+dialog.scelta .chiudi{position:absolute;top:14px;right:16px;width:38px;height:38px;border-radius:50%;border:0;background:var(--lav);color:var(--viola);font-size:24px;cursor:pointer;line-height:1}
+.opzioni{display:grid;gap:10px}
+.opz{display:flex;align-items:center;gap:14px;width:100%;text-align:left;padding:15px 16px;border-radius:18px;border:1px solid var(--line);background:#fff;color:var(--ink);text-decoration:none;font:inherit;cursor:pointer;transition:transform .15s,box-shadow .15s,border-color .15s}
+.opz:hover{transform:translateY(-2px);box-shadow:0 12px 26px #2f2b3d1a;border-color:var(--pesca2)}
+.opz .ic{flex:none;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:21px;background:var(--pesca)}
+#opzPosta .ic{background:var(--menta)} #opzCopia .ic{background:var(--lav)}
+.opz b{display:block;font-size:16px}
+.opz small{display:block;color:var(--muted);font-size:13.5px;line-height:1.35;margin-top:2px;word-break:break-all}
+.opz .fr{margin-left:auto;flex:none;color:var(--filo2);font-weight:700;font-size:15px}
+dialog.scelta .nota{font-size:13px;color:var(--muted);margin:16px 0 0;text-align:center}
+dialog.scelta .nota a{color:var(--ink);font-weight:600}
+
 /* ---------- telefono ----------
    La fattura resta ferma in alto, DIETRO; i testi sono schede bianche che le scorrono SOPRA (sempre leggibili).
    Senza animazione: fattura e testi uno sotto l'altro, normali. */
@@ -507,11 +524,25 @@ footer{background:var(--lav);color:var(--muted);font-size:14px;padding:34px 0;te
   <div class="wrap"><div class="box">
     <h2>Provalo nel tuo studio.</h2>
     <p>Lo stiamo facendo conoscere a poche psicologhe, psicologi e psicoterapeuti. Scrivici: ti mandiamo il link, una guida e il tuo codice di attivazione.</p>
-    <a class="btn" href="mailto:paolo.campanella1990@gmail.com?subject=Vorrei%20provare%20il%20Gestionale%20psicologi&amp;body=Buongiorno%2C%0D%0Avorrei%20provare%20il%20Gestionale%20psicologi%20nel%20mio%20studio.%0D%0A%0D%0ANome%20e%20cognome%3A%0D%0AProfessione%20%28psicologa/o%2C%20psicoterapeuta%29%3A%0D%0ACitt%C3%A0%3A%0D%0AIl%20mio%20computer%20ha%20Windows%20%28s%C3%AC/no%29%3A%0D%0ACome%20ho%20conosciuto%20il%20programma%3A%0D%0A%0D%0AGrazie%21">Richiedi la prova gratuita →</a>
+    <a class="btn" id="btnProva" href="mailto:paolo.campanella1990@gmail.com?subject=Vorrei%20provare%20il%20Gestionale%20psicologi&amp;body=Buongiorno%2C%0D%0Avorrei%20provare%20il%20Gestionale%20psicologi%20nel%20mio%20studio.%0D%0A%0D%0ANome%20e%20cognome%3A%0D%0AProfessione%20%28psicologa/o%2C%20psicoterapeuta%29%3A%0D%0ACitt%C3%A0%3A%0D%0AIl%20mio%20computer%20ha%20Windows%20%28s%C3%AC/no%29%3A%0D%0ACome%20ho%20conosciuto%20il%20programma%3A%0D%0A%0D%0AGrazie%21">Richiedi la prova gratuita →</a>
     <small>30 giorni completi · nessuna carta di credito · Windows 10 e 11</small>
     <p class="nota-priv">Il tuo indirizzo email lo usiamo solo per risponderti e mandarti la prova: niente pubblicità, niente newsletter, non lo diamo a nessuno. <a href="privacy.html">Informativa privacy</a></p>
   </div></div>
 </section>
+
+
+<dialog id="dlgProva" class="scelta" aria-labelledby="sceltaTitolo">
+  <button class="chiudi" type="button" aria-label="Chiudi">×</button>
+  <span class="eyebrow">Richiedi la prova</span>
+  <h3 id="sceltaTitolo">Come preferisci scriverci?</h3>
+  <p class="sotto">La mail è già pronta: completa nome, professione e città e premi Invia.</p>
+  <div class="opzioni" id="opzioni">
+    <a class="opz" id="opzGmail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=paolo.campanella1990%40gmail.com&amp;su=Vorrei%20provare%20il%20Gestionale%20psicologi&amp;body=Buongiorno%2C%0Avorrei%20provare%20il%20Gestionale%20psicologi%20nel%20mio%20studio.%0A%0ANome%20e%20cognome%3A%0AProfessione%20%28psicologa/o%2C%20psicoterapeuta%29%3A%0ACitt%C3%A0%3A%0AIl%20mio%20computer%20ha%20Windows%20%28s%C3%AC/no%29%3A%0ACome%20ho%20conosciuto%20il%20programma%3A%0A%0AGrazie%21" target="_blank" rel="noopener"><span class="ic">✉️</span><span><b>Scrivi con Gmail</b><small>Si apre Gmail nel browser con la mail già compilata</small></span><span class="fr">→</span></a>
+    <a class="opz" id="opzPosta" href="mailto:paolo.campanella1990@gmail.com?subject=Vorrei%20provare%20il%20Gestionale%20psicologi&amp;body=Buongiorno%2C%0D%0Avorrei%20provare%20il%20Gestionale%20psicologi%20nel%20mio%20studio.%0D%0A%0D%0ANome%20e%20cognome%3A%0D%0AProfessione%20%28psicologa/o%2C%20psicoterapeuta%29%3A%0D%0ACitt%C3%A0%3A%0D%0AIl%20mio%20computer%20ha%20Windows%20%28s%C3%AC/no%29%3A%0D%0ACome%20ho%20conosciuto%20il%20programma%3A%0D%0A%0D%0AGrazie%21"><span class="ic">📮</span><span><b>Apri il tuo programma di posta</b><small>Outlook, Mail, o l'app di posta del telefono</small></span><span class="fr">→</span></a>
+    <button class="opz" id="opzCopia" type="button"><span class="ic">📋</span><span><b>Copia l'indirizzo email</b><small id="copiaTesto">paolo.campanella1990@gmail.com</small></span><span class="fr" id="copiaOk">Copia</span></button>
+  </div>
+  <p class="nota">Usiamo il tuo indirizzo solo per risponderti e mandarti la prova. <a href="privacy.html">Informativa privacy</a></p>
+</dialog>
 
 <footer><div class="wrap">Gestionale psicologi · per psicologi e psicoterapeuti · <a href="privacy.html">Informativa privacy</a><br>I calcoli fiscali sono stime da verificare con il commercialista. Gli invii al Sistema TS avvengono con le credenziali dell'utente.</div></footer>
 
@@ -577,6 +608,24 @@ footer{background:var(--lav);color:var(--muted);font-size:14px;padding:34px 0;te
     carta.style.transform = 'none';
     const k = Math.min(.9, (palco.clientHeight - 24) / (carta.offsetHeight + 110), (innerWidth - 40) / (carta.offsetWidth + 70));
     carta.style.transform = `scale(${Math.max(.5, k)})`;
+  }
+
+  // ----- "Richiedi la prova": scelta tra Gmail, programma di posta e copia dell'indirizzo
+  const dlg = document.getElementById('dlgProva'), btnProva = document.getElementById('btnProva');
+  if (dlg && btnProva && dlg.showModal) {
+    // sul telefono prima l'app di posta (va dritta in Gmail o nell'app che si usa), sul computer prima Gmail nel browser
+    if (matchMedia('(pointer: coarse)').matches) document.getElementById('opzioni').prepend(document.getElementById('opzPosta'));
+    // il pulsante finale, "Richiedi la prova" in alto e "Provalo gratis" aprono tutti la scelta
+    [btnProva, ...document.querySelectorAll('a.btn-filo[href="#prova"]')].forEach(x => x.addEventListener('click', e => { e.preventDefault(); dlg.showModal(); }));
+    dlg.querySelector('.chiudi').addEventListener('click', () => dlg.close());
+    dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });   // clic fuori dal riquadro
+    dlg.querySelectorAll('a.opz').forEach(a => a.addEventListener('click', () => setTimeout(() => dlg.close(), 300)));
+    document.getElementById('opzCopia').addEventListener('click', async () => {
+      const ok = document.getElementById('copiaOk'), ind = document.getElementById('copiaTesto').textContent;
+      try { await navigator.clipboard.writeText(ind); ok.textContent = 'Copiato ✓'; }
+      catch { const r = document.createRange(); r.selectNodeContents(document.getElementById('copiaTesto')); getSelection().removeAllRanges(); getSelection().addRange(r); ok.textContent = 'Selezionato: Ctrl+C'; }
+      setTimeout(() => ok.textContent = 'Copia', 2500);
+    });
   }
 
   let rq = 0;
