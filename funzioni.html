@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tutte le funzioni — Gestionale psicologi</title>
+<meta name="description" content="Tutte le funzioni del Gestionale psicologi, schermata per schermata: agenda, fatture, marca da bollo, Sistema Tessera Sanitaria, consenso a distanza, pazienti, guadagni, tasse ed ENPAP, backup.">
+<meta property="og:type" content="website"><meta property="og:locale" content="it_IT"><meta property="og:site_name" content="Gestionale psicologi">
+<meta property="og:title" content="Tutte le funzioni — Gestionale psicologi">
+<meta property="og:description" content="Agenda, fatture, Sistema TS, consenso a distanza, tasse ed ENPAP: cosa fa il programma, schermata per schermata.">
+<meta property="og:url" content="https://paolocampanella1990-lab.github.io/funzioni.html">
+<meta property="og:image" content="https://paolocampanella1990-lab.github.io/anteprima.jpg"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png"><link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#fcf9f4">
+<style>
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fraunces-italic-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fraunces-italic-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fraunces-italic-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fraunces-italic-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fraunces-normal-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fraunces-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fraunces-normal-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fraunces-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(manrope-normal-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(manrope-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(manrope-normal-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(manrope-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(manrope-normal-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(manrope-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(manrope-normal-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(manrope-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+:root{
+  --ink:#2f2b3d; --muted:#6f6982; --soft:#9a94ab;
+  --paper:#fcf9f4; --panna:#f5efe6; --line:#ebe3d7;
+  --lav:#ece7f8; --lav2:#ddd5f2; --pesca:#ffe4d6; --pesca2:#ffd2bd; --menta:#d9f1e7; --cielo:#dfedf9; --burro:#fff1c7;
+  --filo:#ec8466; --filo2:#e06f50; --viola:#7a68b8; --verde:#2e8a66;
+  --serif:'Fraunces',Georgia,serif; --sans:'Manrope',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 24px;border-radius:999px;font-weight:700;text-decoration:none;font-size:16px;border:1.5px solid transparent;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px #2f2b3d1f}
+.btn-filo{background:var(--filo);color:#fff}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--viola)}
+header{position:sticky;top:0;z-index:50;background:rgba(252,249,244,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:14px;padding:14px 0}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:17px;text-decoration:none;white-space:nowrap}
+.nav .sp{flex:1}
+.nav .btn{padding:10px 18px;font-size:14.5px}
+@media(max-width:560px){.nav .btn{display:none}}
+.testa{padding:70px 0 40px;background:radial-gradient(520px 380px at 90% 0%,var(--pesca) 0,transparent 70%),radial-gradient(520px 380px at 0% 100%,var(--lav) 0,transparent 70%)}
+.testa h1{font-family:var(--serif);font-weight:400;font-size:clamp(40px,6vw,76px);line-height:1.03;letter-spacing:-.02em;margin:14px 0 16px;max-width:15ch}
+.testa h1 em{font-style:italic;color:var(--filo2)}
+.testa p{color:var(--muted);font-size:19px;max-width:620px;margin:0 0 28px}
+.indice{display:flex;flex-wrap:wrap;gap:8px}
+.indice a{font-size:14.5px;font-weight:600;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 15px}
+.indice a:hover{background:var(--pesca);border-color:var(--pesca2)}
+.fz{padding:56px 0}
+.fz:nth-of-type(even){background:var(--panna)}
+.fz-in{display:grid;grid-template-columns:1fr 1.25fr;gap:52px;align-items:center}
+.fz.rev .fz-testo{order:2}
+.num{font-family:var(--serif);font-style:italic;color:var(--filo2);font-size:22px}
+.fz h2{font-family:var(--serif);font-weight:400;font-size:clamp(30px,3.4vw,44px);line-height:1.08;margin:4px 0 12px}
+.fz p{color:var(--muted);font-size:18px;margin:0 0 16px}
+.fz ul{margin:0;padding:0;list-style:none;display:grid;gap:9px}
+.fz li{position:relative;padding-left:28px;font-size:16px;color:#4a4560}
+.fz li::before{content:'';position:absolute;left:4px;top:.55em;width:12px;height:12px;border-radius:50%;background:var(--pesca2);box-shadow:0 0 0 3px var(--pesca)}
+.fz-img{display:block;border-radius:16px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 26px 60px #2f2b3d1f;text-decoration:none;transition:transform .25s}
+.fz-img:hover{transform:translateY(-4px)}
+.fz-img .barretta{height:28px;background:#f6f3fc;display:flex;align-items:center;gap:6px;padding:0 12px;border-bottom:1px solid var(--lav2)}
+.fz-img .barretta i{width:10px;height:10px;border-radius:50%;display:block}
+.fz-img .barretta i:nth-child(1){background:var(--pesca2)}.fz-img .barretta i:nth-child(2){background:var(--burro)}.fz-img .barretta i:nth-child(3){background:var(--menta)}
+.fz-img img{display:block;width:100%;height:auto}
+@media(max-width:860px){.fz-in{grid-template-columns:1fr;gap:24px}.fz.rev .fz-testo{order:0}.fz{padding:44px 0}}
+.finale{padding:70px 0 100px}
+.finale .box{background:linear-gradient(135deg,var(--pesca),var(--lav));border-radius:28px;padding:56px 32px;text-align:center}
+.finale h2{font-family:var(--serif);font-weight:400;font-size:clamp(32px,4.4vw,54px);line-height:1.06;margin:0 0 12px}
+.finale p{color:var(--muted);font-size:18px;max-width:540px;margin:0 auto 24px}
+.finale .btn{background:var(--ink);color:#fff}
+footer{background:var(--lav);color:var(--muted);font-size:14px;padding:30px 0;text-align:center}
+footer a{color:var(--ink);font-weight:600}
+</style>
+<link rel="stylesheet" href="comune.css?v=20261112">
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="logo" href="./"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="#ec8466"/><path d="M7 18c3-8 7 4 10-3s5-5 6-2" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg><span>Gestionale psicologi</span></a>
+  <span class="sp"></span>
+  <a class="btn btn-filo" href="./#prova" data-scarica>Scarica gratis</a>
+</div></header>
+
+<section class="testa"><div class="wrap">
+  <span class="eyebrow">Tutte le funzioni</span>
+  <h1>Il programma, <em>schermata per schermata</em>.</h1>
+  <p>Ecco cosa trovi dentro, con le immagini vere del programma (con dati di esempio inventati). Scegli da dove partire:</p>
+  <nav class="indice" aria-label="Funzioni"><a href="#agenda">Agenda</a><a href="#fattura">Nuova fattura</a><a href="#elenco">Tutte le fatture</a><a href="#bollo">Marca da bollo</a><a href="#sistema-ts">Sistema TS</a><a href="#consenso">Consenso informato a distanza</a><a href="#pazienti">Pazienti</a><a href="#guadagni">Guadagni</a><a href="#tasse">Tasse ed ENPAP</a><a href="#backup">Backup</a></nav>
+</div></section>
+
+  <section class="fz" id="agenda">
+    <div class="wrap fz-in">
+      <div class="fz-testo"><span class="num">01</span><h2>Agenda e promemoria</h2><p>La settimana dello studio a colpo d'occhio, con le sedute di oggi e le cose da fare a fianco.</p><ul><li>Vista giorno, settimana o mese; colori per tipo di seduta e per luogo (studio, online, città)</li><li>"Oggi": con un clic segni la seduta svolta o fai subito la fattura</li><li>Promemoria al paziente il giorno prima, per email o WhatsApp, con il testo che preferisci</li><li>Richieste di appuntamento da MioDottore e dalle mail dei pazienti: niente entra in agenda senza il tuo ok</li><li>Stampa della settimana in PDF, da tenere sul telefono</li></ul></div>
+      <a class="fz-img" href="agenda.jpg" target="_blank" title="Apri l'immagine grande"><div class="barretta"><i></i><i></i><i></i></div><img src="agenda.jpg" alt="Agenda e promemoria: la schermata del programma"></a>
+    </div>
+  </section>
+  <section class="fz rev" id="fattura">
+    <div class="wrap fz-in">
+      <div class="fz-testo"><span class="num">02</span><h2>Nuova fattura</h2><p>Scrivi tre lettere del cognome e premi Invio: numero, data, dati del paziente e importo sono già pronti.</p><ul><li>A destra l'anteprima: è esattamente la fattura che verrà salvata, con la tua intestazione</li><li>Listino delle prestazioni: scegli e l'importo si mette da solo; bonus psicologo e contributo ENPAP calcolati</li><li>Controlli prima di creare: codice fiscale, possibili doppioni, numeri saltati</li><li>Pacchetti di sedute prepagate, che si scalano da soli dall'agenda</li></ul></div>
+      <a class="fz-img" href="nuova-fattura.jpg" target="_blank" title="Apri l'immagine grande"><div class="barretta"><i></i><i></i><i></i></div><img src="nuova-fattura.jpg" alt="Nuova fattura: la schermata del programma"></a>
+    </div>
+  </section>
+  <section class="fz" id="elenco">
+    <div class="wrap fz-in">
+      <div class="fz-testo"><span class="num">03</span><h2>Tutte le fatture</h2><p>L'archivio completo, in ordine, con tutto a portata di clic.</p><ul><li>Su ogni riga PDF, Email e Modifica; nel menu ⋯ nota di credito e data di incasso</li><li>Mail al paziente con il PDF già allegato, protetto con il suo codice fiscale</li><li>Ricerca per nome, codice fiscale o numero; filtri per anno e mese</li><li>Le fatture fatte con un altro programma si caricano leggendo i PDF</li></ul></div>
+      <a class="fz-img" href="fatture.jpg" target="_blank" title="Apri l'immagine grande"><div class="barretta"><i></i><i></i><i></i></div><img src="fatture.jpg" alt="Tutte le fatture: la schermata del programma"></a>
+    </div>
+  </section>
+  <section class="fz rev" id="bollo">
+    <div class="wrap fz-in">
+      <div class="fz-testo"><span class="num">04</span><h2>Marca da bollo</h2><p>Sopra 77,47 € la marca da bollo da 2 € si aggiunge da sola, a carico del paziente.</p><ul><li>Le fatture con il bollo finiscono in "Da bollare": le stampi tutte in un unico PDF</li><li>Applichi la marca, fai una foto o una scansione e la carichi: la fattura passa tra le bollate</li><li>Le copie bollate restano archiviate anno per anno</li></ul></div>
+      <a class="fz-img" href="da-bollare.jpg" target="_blank" title="Apri l'immagine grande"><div class="barretta"><i></i><i></i><i></i></div><img src="da-bollare.jpg" alt="Marca da bollo: la schermata del programma"></a>
+    </div>
+  </section>
+  <section class="fz" id="sistema-ts">
+    <div class="wrap fz-in">
+      <div class="fz-testo"><span class="num">05</span><h2>Sistema Tessera Sanitaria</h2><p>Le spese dell'anno, pronte da inviare, in ordine di numero. Un tasto e partono.</p><ul><li>Invio diretto con le tue credenziali, che restano cifrate sul tuo computer</li><li>Per ogni fattura l'esito ricevuto: accolta, scartata o in attesa</li><li>Opposizione del paziente gestita da sola; per i bonifici conta il giorno dell'incasso</li><li>Riepilogo degli invii in PDF ed Excel, per i tuoi controlli e per il commercialista</li></ul></div>
+      <a class="fz-img" href="sistema-ts.jpg" target="_blank" title="Apri l'immagine grande"><div class="barretta"><i></i><i></i><i></i></div><img src="sistema-ts.jpg" alt="Sistema Tessera Sanitaria: la schermata del programma"></a>
+    </div>
+  </section>
+  <section class="fz rev" id="consenso">
+    <div class="wrap fz-in">
+      <div class="fz-testo"><span class="num">06</span><h2>Consenso informato a distanza</h2><p>Il consenso sul modello dell'Ordine, firmato dal paziente senza stampare né scansionare.</p><ul><li>Il paziente riceve una mail con il modulo e un codice personale e risponde ACCETTO</li><li>Il programma prepara il consenso compilato e l'attestazione e li salva nella sua scheda</li><li>Coppie e minori: un codice per ciascuno, anche per i due genitori</li><li>La tua firma e il tuo timbro in fondo ai moduli</li></ul></div>
+      <a class="fz-img" href="consenso.jpg" target="_blank" title="Apri l'immagine grande"><div class="barretta"><i></i><i></i><i></i></div><img src="consenso.jpg" alt="Consenso informato a distanza: la schermata del programma"></a>
+    </div>
+  </section>
+  <section class="fz" id="pazienti">
+    <div class="wrap fz-in">
+      <div class="fz-testo"><span class="num">07</span><h2>Pazienti</h2><p>La rubrica dello studio: un clic su un nome apre la sua scheda.</p><ul><li>Dati, contatti, sedute, fatture e documenti di ogni paziente in un posto solo</li><li>I documenti che il paziente ti manda per email finiscono da soli nella sua scheda</li><li>Hai eliminato qualcosa per sbaglio? Subito dopo compare "Annulla"</li></ul></div>
+      <a class="fz-img" href="pazienti.jpg" target="_blank" title="Apri l'immagine grande"><div class="barretta"><i></i><i></i><i></i></div><img src="pazienti.jpg" alt="Pazienti: la schermata del programma"></a>
+    </div>
+  </section>
+  <section class="fz rev" id="guadagni">
+    <div class="wrap fz-in">
+      <div class="fz-testo"><span class="num">08</span><h2>Guadagni</h2><p>Quanto incassi, quanto ti resta davvero e come va rispetto all'anno prima.</p><ul><li>Fatturato mese per mese, accanto a quello dell'anno precedente</li><li>"Ti resta in tasca": il fatturato tolte tasse ed ENPAP stimate</li><li>Il tuo studio in numeri: sedute, pazienti nuovi, disdette, mese migliore</li><li>Pacchetto per il commercialista: fatture, riepilogo e documenti in un unico file</li></ul></div>
+      <a class="fz-img" href="guadagni.jpg" target="_blank" title="Apri l'immagine grande"><div class="barretta"><i></i><i></i><i></i></div><img src="guadagni.jpg" alt="Guadagni: la schermata del programma"></a>
+    </div>
+  </section>
+  <section class="fz" id="tasse">
+    <div class="wrap fz-in">
+      <div class="fz-testo"><span class="num">09</span><h2>Tasse ed ENPAP</h2><p>Sei in regola? Cosa devi pagare e quando? Quanto mettere da parte? Le risposte in una pagina.</p><ul><li>Il prossimo pagamento con importo e scadenza, per imposta ed ENPAP</li><li>"Come si paga": F24 e bonifico ENPAP spiegati passo passo, con i dati da copiare</li><li>Il salvadanaio: quanto mettere da parte ogni mese</li><li>Stime con le regole del forfettario, da confrontare con il commercialista</li></ul></div>
+      <a class="fz-img" href="tasse.jpg" target="_blank" title="Apri l'immagine grande"><div class="barretta"><i></i><i></i><i></i></div><img src="tasse.jpg" alt="Tasse ed ENPAP: la schermata del programma"></a>
+    </div>
+  </section>
+  <section class="fz rev" id="backup">
+    <div class="wrap fz-in">
+      <div class="fz-testo"><span class="num">10</span><h2>Backup</h2><p>I dati restano sul tuo computer, e il programma li mette al sicuro da solo.</p><ul><li>Una copia di sicurezza al giorno, in automatico, nella cartella Documenti</li><li>Backup protetti con password, da copiare su una chiavetta o nel tuo cloud</li><li>Cambi computer? Installi il programma, ripristini il backup e ritrovi tutto</li></ul></div>
+      <a class="fz-img" href="backup.jpg" target="_blank" title="Apri l'immagine grande"><div class="barretta"><i></i><i></i><i></i></div><img src="backup.jpg" alt="Backup: la schermata del programma"></a>
+    </div>
+  </section>
+
+<section class="finale"><div class="wrap"><div class="box">
+  <h2>Provalo nel tuo studio.</h2>
+  <p>30 giorni completi, gratis, senza carta di credito. Ci lasci nome ed email e il download parte subito.</p>
+  <a class="btn" href="./#prova" data-scarica>Scarica la prova gratuita →</a>
+</div></div></section>
+
+<footer><div class="wrap">Gestionale psicologi · per psicologi e psicoterapeuti · <a href="./">Pagina principale</a> · <a href="privacy.html">Informativa privacy</a></div></footer>
+<script src="comune.js?v=20261112"></script>
+</body>
+</html>

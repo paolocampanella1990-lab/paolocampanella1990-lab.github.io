@@ -386,6 +386,7 @@ dialog.scelta .nota a{color:var(--ink);font-weight:600}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
+<link rel="stylesheet" href="comune.css?v=20261112">
 </head>
 <body>
 
@@ -396,8 +397,9 @@ dialog.scelta .nota a{color:var(--ink);font-weight:600}
     <a class="l" href="#racconto">Come funziona</a>
     <a class="l" href="#dentro">Il programma</a>
     <a class="l" href="#storia">Com'è nato</a>
+    <a class="l" href="funzioni.html">Funzioni</a>
     <a class="l" href="#domande">Domande</a>
-    <a class="btn btn-filo" href="#prova">Richiedi la prova</a>
+    <a class="btn btn-filo" href="#prova" data-scarica>Scarica gratis</a>
   </div>
 </header>
 
@@ -411,7 +413,7 @@ dialog.scelta .nota a{color:var(--ink);font-weight:600}
     <h1>Il filo che tiene insieme il tuo <em>studio</em>.</h1>
     <p class="sub">Dalla prima seduta all'invio al <b>Sistema Tessera Sanitaria</b>: agenda, fatture, consensi, tasse ed ENPAP in un unico programma. <b>Sul tuo computer</b>, non su un server.</p>
     <div class="cta">
-      <a class="btn btn-filo" href="#prova">Provalo gratis</a>
+      <a class="btn btn-filo" href="#prova" data-scarica>Scarica gratis</a>
       <a class="btn btn-ghost" href="#racconto">Segui il filo ↓</a>
     </div>
     <div class="facts">
@@ -522,20 +524,20 @@ dialog.scelta .nota a{color:var(--ink);font-weight:600}
 
 <section class="prova" id="prova">
   <div class="wrap"><div class="box">
-    <h2>Provalo nel tuo studio.</h2>
-    <p>Lo stiamo facendo conoscere a poche psicologhe, psicologi e psicoterapeuti. Scrivici: ti mandiamo il link, una guida e il tuo codice di attivazione.</p>
-    <a class="btn" id="btnProva" href="mailto:paolo.campanella1990@gmail.com?subject=Vorrei%20provare%20il%20Gestionale%20psicologi&amp;body=Buongiorno%2C%0D%0Avorrei%20provare%20il%20Gestionale%20psicologi%20nel%20mio%20studio.%0D%0A%0D%0ANome%20e%20cognome%3A%0D%0AProfessione%20%28psicologa/o%2C%20psicoterapeuta%29%3A%0D%0ACitt%C3%A0%3A%0D%0AIl%20mio%20computer%20ha%20Windows%20%28s%C3%AC/no%29%3A%0D%0ACome%20ho%20conosciuto%20il%20programma%3A%0D%0A%0D%0AGrazie%21">Richiedi la prova gratuita →</a>
-    <small>30 giorni completi · nessuna carta di credito · Windows 10 e 11</small>
-    <p class="nota-priv">Il tuo indirizzo email lo usiamo solo per risponderti e mandarti la prova: niente pubblicità, niente newsletter, non lo diamo a nessuno. <a href="privacy.html">Informativa privacy</a></p>
+    <h2>Scaricalo e provalo nel tuo studio.</h2>
+    <p>30 giorni completi, gratis. Ci lasci nome, email e professione e il download parte subito: niente codici da aspettare.</p>
+    <a class="btn" href="https://github.com/Paolocampanella1990-lab/gestionale-psicologi-aggiornamenti/releases/latest" data-scarica>Scarica la prova gratuita →</a>
+    <small>Per Windows 10 e 11 · nessuna carta di credito</small>
+    <p class="nota-priv">Preferisci scriverci prima? <a href="mailto:paolo.campanella1990@gmail.com?subject=Vorrei%20provare%20il%20Gestionale%20psicologi&amp;body=Buongiorno%2C%0D%0Avorrei%20provare%20il%20Gestionale%20psicologi%20nel%20mio%20studio.%0D%0A%0D%0ANome%20e%20cognome%3A%0D%0AProfessione%20%28psicologa/o%2C%20psicoterapeuta%29%3A%0D%0ACitt%C3%A0%3A%0D%0AIl%20mio%20computer%20ha%20Windows%20%28s%C3%AC/no%29%3A%0D%0ACome%20ho%20conosciuto%20il%20programma%3A%0D%0A%0D%0AGrazie%21" id="btnProva">Scrivici</a>. I tuoi dati li usiamo solo per mandarti il programma e seguirti durante la prova: niente pubblicità, non li diamo a nessuno. <a href="privacy.html">Informativa privacy</a></p>
   </div></div>
 </section>
 
 
 <dialog id="dlgProva" class="scelta" aria-labelledby="sceltaTitolo">
   <button class="chiudi" type="button" aria-label="Chiudi">×</button>
-  <span class="eyebrow">Richiedi la prova</span>
+  <span class="eyebrow">Scrivici</span>
   <h3 id="sceltaTitolo">Come preferisci scriverci?</h3>
-  <p class="sotto">La mail è già pronta: completa nome, professione e città e premi Invia.</p>
+  <p class="sotto">La mail è già pronta: completala come vuoi e premi Invia. Ti rispondiamo noi.</p>
   <div class="opzioni" id="opzioni">
     <a class="opz" id="opzGmail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=paolo.campanella1990%40gmail.com&amp;su=Vorrei%20provare%20il%20Gestionale%20psicologi&amp;body=Buongiorno%2C%0Avorrei%20provare%20il%20Gestionale%20psicologi%20nel%20mio%20studio.%0A%0ANome%20e%20cognome%3A%0AProfessione%20%28psicologa/o%2C%20psicoterapeuta%29%3A%0ACitt%C3%A0%3A%0AIl%20mio%20computer%20ha%20Windows%20%28s%C3%AC/no%29%3A%0ACome%20ho%20conosciuto%20il%20programma%3A%0A%0AGrazie%21" target="_blank" rel="noopener"><span class="ic">✉️</span><span><b>Scrivi con Gmail</b><small>Si apre Gmail nel browser con la mail già compilata</small></span><span class="fr">→</span></a>
     <a class="opz" id="opzPosta" href="mailto:paolo.campanella1990@gmail.com?subject=Vorrei%20provare%20il%20Gestionale%20psicologi&amp;body=Buongiorno%2C%0D%0Avorrei%20provare%20il%20Gestionale%20psicologi%20nel%20mio%20studio.%0D%0A%0D%0ANome%20e%20cognome%3A%0D%0AProfessione%20%28psicologa/o%2C%20psicoterapeuta%29%3A%0D%0ACitt%C3%A0%3A%0D%0AIl%20mio%20computer%20ha%20Windows%20%28s%C3%AC/no%29%3A%0D%0ACome%20ho%20conosciuto%20il%20programma%3A%0D%0A%0D%0AGrazie%21"><span class="ic">📮</span><span><b>Apri il tuo programma di posta</b><small>Outlook, Mail, o l'app di posta del telefono</small></span><span class="fr">→</span></a>
@@ -616,7 +618,7 @@ dialog.scelta .nota a{color:var(--ink);font-weight:600}
     // sul telefono prima l'app di posta (va dritta in Gmail o nell'app che si usa), sul computer prima Gmail nel browser
     if (matchMedia('(pointer: coarse)').matches) document.getElementById('opzioni').prepend(document.getElementById('opzPosta'));
     // il pulsante finale, "Richiedi la prova" in alto e "Provalo gratis" aprono tutti la scelta
-    [btnProva, ...document.querySelectorAll('a.btn-filo[href="#prova"]')].forEach(x => x.addEventListener('click', e => { e.preventDefault(); dlg.showModal(); }));
+    btnProva.addEventListener('click', e => { e.preventDefault(); dlg.showModal(); });
     dlg.querySelector('.chiudi').addEventListener('click', () => dlg.close());
     dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });   // clic fuori dal riquadro
     dlg.querySelectorAll('a.opz').forEach(a => a.addEventListener('click', () => setTimeout(() => dlg.close(), 300)));
@@ -636,5 +638,6 @@ dialog.scelta .nota a{color:var(--ink);font-weight:600}
   adattaCarta(); costruisciFilo(); misuraGalleria(); aggiorna();
 })();
 </script>
+<script src="comune.js?v=20261112"></script>
 </body>
 </html>
