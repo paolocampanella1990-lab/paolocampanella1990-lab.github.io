@@ -52,5 +52,10 @@ dialog.scelta .nota a{color:var(--ink);font-weight:600}
 .grazie ol li{margin:8px 0}
 .grazie ol b{color:var(--ink)}
 .grazie .btn{width:100%;justify-content:center}
+.grazie [hidden]{display:none!important}
+.grazie .g-alt{margin:12px 0 4px;font-size:14.5px;color:var(--muted)}
+.grazie .g-alt summary{cursor:pointer;color:var(--ink);font-weight:600}
+.grazie .g-alt p{margin:8px 0 0}
+.grazie .g-alt a{color:var(--ink);font-weight:600}
 .grazie .telefono{background:var(--menta);border-radius:14px;padding:12px 16px;font-size:15px;margin:0 0 14px}
 @media(max-width:560px){.modulo .campi{grid-template-columns:1fr}dialog.scelta{padding:30px 20px 20px}dialog.scelta h3{font-size:27px}}
