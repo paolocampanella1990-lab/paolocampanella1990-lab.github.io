@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://paolocampanella1990-lab.github.io/sitemap.xml

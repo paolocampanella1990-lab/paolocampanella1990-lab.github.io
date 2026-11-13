@@ -21,6 +21,7 @@
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="theme-color" content="#fcf9f4">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Gestionale Psicologi","applicationCategory":"BusinessApplication","operatingSystem":"Windows 10, Windows 11","inLanguage":"it-IT","description":"Gestionale per psicologi e psicoterapeuti in regime forfettario: fatture con bollo, ENPAP e bonus psicologo, invio al Sistema Tessera Sanitaria, agenda, consenso informato a distanza, tasse ed ENPAP. I dati restano sul computer.","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR","description":"Prova gratuita di 30 giorni"},"downloadUrl":"https://apps.microsoft.com/detail/9P6MGWKBRBKK","author":{"@type":"Person","name":"Paolo Campanella"},"url":"https://paolocampanella1990-lab.github.io/"}</script>
 <link rel="preload" href="manrope-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fraunces-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -385,8 +386,96 @@ dialog.scelta .nota a{color:var(--ink);font-weight:600}
   .ts{bottom:-40px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* ---------- telefono stretto: niente che sborda di lato ---------- */
+.filo-wrap{overflow-x:clip}
+/* ---------- novità, bollino, prova vera ---------- */
+.novita{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;background:#fff;border:1px solid var(--pesca2);border-radius:999px;padding:7px 16px 7px 8px;font-size:14.5px;color:var(--ink);text-decoration:none;box-shadow:0 8px 22px #ec846622;margin-bottom:6px;transition:transform .2s}
+.novita:hover{transform:translateY(-2px)}
+.novita b{background:var(--filo);color:#fff;border-radius:999px;padding:3px 10px;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.novita span{color:var(--filo2);font-weight:700}
+.badge-store{display:inline-flex;align-items:center;transition:transform .2s}
+.badge-store:hover{transform:translateY(-2px)}
+.badge-store img{height:52px;width:auto;display:block}
+.vera{display:flex;align-items:center;gap:10px;margin:22px 0 0;color:var(--muted);font-size:15.5px;max-width:620px}
+.vera i{flex:none;width:26px;height:26px;border-radius:50%;background:var(--verde);color:#fff;display:grid;place-items:center;font-style:normal;font-weight:800;font-size:14px}
+.vera b{color:var(--ink)}
+
+/* ---------- video ---------- */
+.video{padding:110px 0 30px;background:var(--paper)}
+.video .testa-v{text-align:center;margin-bottom:30px}
+.video h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,56px);line-height:1.06;margin:12px 0 8px}
+.video h2 em{color:var(--filo2)}
+.video .testa-v p{color:var(--muted);font-size:18px;margin:0}
+.schermo-v{max-width:980px;margin:0 auto;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 40px 90px #7a68b833;border:1px solid var(--lav2)}
+.schermo-v .barretta{height:32px;background:#f6f3fc;display:flex;align-items:center;gap:6px;padding:0 14px;border-bottom:1px solid var(--lav2)}
+.schermo-v .barretta i{width:11px;height:11px;border-radius:50%;display:block}
+.schermo-v .barretta i:nth-child(1){background:var(--pesca2)}.schermo-v .barretta i:nth-child(2){background:var(--burro)}.schermo-v .barretta i:nth-child(3){background:var(--menta)}
+.schermo-v video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:var(--panna)}
+
+/* ---------- per chi è ---------- */
+.perchi{padding:90px 0 20px;background:var(--paper)}
+.perchi h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,56px);line-height:1.06;margin:12px 0 30px;text-align:center}
+.perchi h2 em{color:var(--filo2)}
+.perchi .eyebrow{display:block;text-align:center}
+.due{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:980px;margin:0 auto}
+.due>div{border-radius:24px;padding:26px 28px}
+.due .si{background:var(--menta)}.due .no{background:#fff;border:1px solid var(--line)}
+.due h3{font-family:var(--serif);font-weight:600;font-size:24px;margin:0 0 12px}
+.due ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.due li{display:flex;gap:10px;font-size:16.5px;color:var(--ink)}
+.due li::before{flex:none;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:13px;font-weight:800;margin-top:1px}
+.due .si li::before{content:'✓';background:var(--verde);color:#fff}
+.due .no li::before{content:'–';background:var(--panna);color:var(--muted)}
+.due .no li{color:var(--muted)}
+@media(max-width:760px){.due{grid-template-columns:1fr}}
+
+/* ---------- strumenti e guide ---------- */
+.strumenti{padding:100px 0 30px;background:var(--paper)}
+.strumenti .testa-s{text-align:center;margin-bottom:30px}
+.strumenti h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,56px);line-height:1.06;margin:12px 0 8px}
+.strumenti h2 em{color:var(--filo2)}
+.strumenti .testa-s p{color:var(--muted);font-size:18px;margin:0}
+.calc-banda{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:center;background:var(--ink);color:#fff;border-radius:28px;padding:38px 40px;margin-bottom:22px;text-decoration:none;transition:transform .2s}
+.calc-banda:hover{transform:translateY(-3px)}
+.calc-banda .eyebrow{color:#cfc6f2}
+.calc-banda h3{font-family:var(--serif);font-weight:400;font-size:clamp(28px,3.4vw,42px);line-height:1.08;margin:8px 0 10px}
+.calc-banda p{color:#ddd8ee;margin:0 0 18px;font-size:16.5px}
+.calc-banda .finto{background:#ffffff12;border-radius:20px;padding:20px 22px}
+.calc-banda .finto small{color:#cfc6f2}
+.calc-banda .finto b{display:block;font-family:var(--serif);font-size:48px;font-weight:400;line-height:1.05}
+.calc-banda .finto .bar{display:flex;height:12px;border-radius:7px;overflow:hidden;gap:2px;margin-top:12px}
+.calc-banda .finto .bar i{display:block}
+.calc-banda .vai{display:inline-flex;background:var(--filo);color:#fff;border-radius:999px;padding:12px 22px;font-weight:700}
+.guide{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.guide a{display:block;background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px;text-decoration:none;color:var(--ink);transition:transform .2s,box-shadow .2s}
+.guide a:hover{transform:translateY(-3px);box-shadow:0 16px 34px #2f2b3d14}
+.guide a:nth-child(1){background:var(--burro);border-color:#f5e3a6}
+.guide small{display:block;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--viola);margin-bottom:6px}
+.guide b{display:block;font-family:var(--serif);font-weight:600;font-size:21px;line-height:1.2;margin-bottom:6px}
+.guide span{color:var(--muted);font-size:15px}
+.guide-piede{text-align:center;margin-top:18px}
+.guide-piede a{color:var(--ink);font-weight:700}
+@media(max-width:980px){.guide{grid-template-columns:1fr 1fr}.calc-banda{grid-template-columns:1fr;padding:30px 26px}}
+@media(max-width:560px){.guide{grid-template-columns:1fr}}
+
+/* ---------- parliamone, app ---------- */
+.contatti{padding:20px 0 70px;background:var(--paper)}
+.contatti .due>div{padding:30px 30px 28px}
+.contatti .chiama{background:var(--cielo)}
+.contatti .app{background:var(--lav)}
+.contatti h3{font-family:var(--serif);font-weight:400;font-size:clamp(26px,3vw,34px);line-height:1.1;margin:8px 0 10px}
+.contatti p{color:var(--muted);margin:0 0 18px;font-size:16.5px}
+.contatti .azioni{display:flex;gap:10px;flex-wrap:wrap}
+.contatti .btn{padding:12px 20px;font-size:15px}
+.btn-scuro{background:var(--ink);color:#fff}
+.contatti .pill{display:inline-block;background:#fff;color:var(--viola);border-radius:999px;padding:4px 12px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+/* telefono: in fondo, così vince sulle regole sopra */
+.nav .btn{white-space:nowrap}
+@media(max-width:560px){.novita{border-radius:18px;font-size:13.5px;line-height:1.4;padding:9px 12px;gap:6px 8px}.novita b{font-size:11px}}
+@media(max-width:430px){.nav{gap:10px}.wrap{padding:0 16px}.logo span{font-size:15px}.nav .btn{display:none}.badge-store img{height:48px}.hero{padding-top:96px}}
 </style>
-<link rel="stylesheet" href="comune.css?v=20261113">
+<link rel="stylesheet" href="comune.css?v=20261113b">
 </head>
 <body>
 
@@ -398,6 +487,7 @@ dialog.scelta .nota a{color:var(--ink);font-weight:600}
     <a class="l" href="#dentro">Il programma</a>
     <a class="l" href="#storia">Com'è nato</a>
     <a class="l" href="funzioni.html">Funzioni</a>
+    <a class="l" href="calcolatore.html">Calcolatore</a>
     <a class="l" href="#domande">Domande</a>
     <a class="btn btn-filo" href="#prova" data-scarica>Scarica gratis</a>
   </div>
@@ -409,13 +499,16 @@ dialog.scelta .nota a{color:var(--ink);font-weight:600}
 <section class="hero">
   <div class="grana"></div>
   <div class="wrap">
+    <a class="novita" href="guida-enpap-2027.html"><b>Novità 2027</b>Riforma ENPAP: dal 1° gennaio il contributo passa al 4%. Il programma lo fa già da solo <span>→</span></a><br>
     <span class="eyebrow">Gestionale per psicologi e psicoterapeuti</span>
     <h1>Il filo che tiene insieme il tuo <em>studio</em>.</h1>
     <p class="sub">Dalla prima seduta all'invio al <b>Sistema Tessera Sanitaria</b>: agenda, fatture, consensi, tasse ed ENPAP in un unico programma. <b>Sul tuo computer</b>, non su un server.</p>
     <div class="cta">
       <a class="btn btn-filo" href="#prova" data-scarica>Scarica gratis</a>
+      <a class="badge-store" href="https://apps.microsoft.com/detail/9P6MGWKBRBKK?hl=it-IT&amp;gl=IT" data-scarica aria-label="Scarica dal Microsoft Store"><img src="microsoft-store.svg" alt="Scarica da Microsoft Store" width="161" height="44"></a>
       <a class="btn btn-ghost" href="#racconto">Segui il filo ↓</a>
     </div>
+    <p class="vera"><i>✓</i><span><b>Usato ogni giorno da una psicologa in studio</b> · oltre 100 fatture inviate al Sistema Tessera Sanitaria</span></p>
     <div class="facts">
       <div><b>30 giorni</b>di prova completa</div>
       <div><b>0 server</b>i dati restano da te</div>
@@ -474,6 +567,14 @@ dialog.scelta .nota a{color:var(--ink);font-weight:600}
   </div>
 </section>
 
+<section class="video" id="video">
+  <div class="wrap">
+    <div class="testa-v"><span class="eyebrow">In 30 secondi</span><h2>Guardalo <em>al lavoro</em>.</h2><p>Una fattura in pochi secondi, l'invio al Sistema TS, quanto ti resta e le tasse: il programma vero, con dati di esempio.</p></div>
+    <div class="schermo-v"><div class="barretta"><i></i><i></i><i></i></div>
+      <video src="demo.webm" poster="demo.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Video dimostrativo del Gestionale psicologi"></video></div>
+  </div>
+</section>
+
 <section class="storia" id="storia">
   <div class="wrap storia-in">
     <div>
@@ -484,9 +585,31 @@ dialog.scelta .nota a{color:var(--ink);font-weight:600}
       <p class="firma">— Paolo, sviluppatore del programma</p>
     </div>
     <div class="numeri">
-      <div><b>Ogni giorno</b><span>in uso in uno studio di psicologia, con pazienti veri</span></div>
+      <div><b>Ogni giorno</b><span>usato da una psicologa in studio, con pazienti veri</span></div>
       <div><b>Oltre 100</b><span>spese già inviate al Sistema TS con il programma, tutte accolte</span></div>
       <div><b>Una persona</b><span>che ti risponde: scrivi e ti risponde chi l'ha costruito</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="perchi" id="perchi">
+  <div class="wrap">
+    <span class="eyebrow">Onestamente</span>
+    <h2>È fatto <em>per te</em> se…</h2>
+    <div class="due">
+      <div class="si"><h3>È per te se</h3><ul>
+        <li>sei psicologa, psicologo o psicoterapeuta e lavori in libera professione</li>
+        <li>sei nel regime forfettario e iscritta/o all'ENPAP</li>
+        <li>lavori su un computer con Windows 10 o 11</li>
+        <li>vuoi i dati dei pazienti sul tuo computer, non su un server</li>
+        <li>vuoi inviare le spese al Sistema TS senza farlo a mano</li>
+      </ul></div>
+      <div class="no"><h3>Non è (ancora) per te se</h3><ul>
+        <li>usi solo un Mac (la versione per Mac non c'è ancora)</li>
+        <li>sei in regime ordinario, con l'IVA</li>
+        <li>sei un centro con più professionisti che lavorano sullo stesso archivio</li>
+        <li>vuoi lavorare solo dal telefono (l'app è in arrivo)</li>
+      </ul></div>
     </div>
   </div>
 </section>
@@ -501,6 +624,32 @@ dialog.scelta .nota a{color:var(--ink);font-weight:600}
       <div><b>Backup protetti</b><span>Una copia al giorno in automatico, con password, su chiavetta o nel tuo cloud.</span></div>
       <div><b>Tu sei la titolare</b><span>Come chiede il GDPR: i dati dei pazienti sono tuoi e li controlli tu.</span></div>
     </div>
+  </div>
+</section>
+
+<section class="strumenti" id="strumenti">
+  <div class="wrap">
+    <div class="testa-s"><span class="eyebrow">Gratis, anche senza il programma</span><h2>Strumenti e <em>guide</em>.</h2><p>Le risposte alle domande che ogni psicologa si fa, scritte in modo semplice.</p></div>
+    <a class="calc-banda" href="calcolatore.html">
+      <div><span class="eyebrow">Calcolatore del forfettario</span><h3>Quanto ti resta in tasca, al mese?</h3><p>Prezzo della seduta, sedute a settimana, settimane di lavoro: vedi subito quanto va in tasse ed ENPAP (2026 e 2027) e quanto resta a te.</p><span class="vai">Prova il calcolatore →</span></div>
+      <div class="finto"><small>Esempio: 70 € · 15 sedute a settimana</small><b>≈ € 3.380</b><small>al mese nel 2027 (primi 5 anni), tolte tasse ed ENPAP</small><div class="bar"><i style="width:84%;background:#7fd1ae"></i><i style="width:4%;background:#ec8466"></i><i style="width:12%;background:#b7a8ea"></i></div></div>
+    </a>
+    <div class="guide">
+      <a href="guida-enpap-2027.html"><small>Novità 2027</small><b>ENPAP: cosa cambia con il 4%</b><span>Integrativo in fattura e soggettivo che sale, con gli esempi.</span></a>
+      <a href="guida-marca-da-bollo.html"><small>Guida</small><b>La marca da bollo in fattura</b><span>Quando serve, come si mette, chi la paga.</span></a>
+      <a href="guida-sistema-ts.html"><small>Guida</small><b>Il Sistema Tessera Sanitaria</b><span>Cosa inviare, entro quando, l'opposizione.</span></a>
+      <a href="guida-bonus-psicologo.html"><small>Guida</small><b>La fattura con il bonus psicologo</b><span>Codice, quota INPS e quota del paziente.</span></a>
+    </div>
+    <p class="guide-piede">E se ti chiedi dove finiscono i dati dei tuoi pazienti: <a href="sicurezza.html">la sicurezza dei dati, spiegata semplice →</a></p>
+  </div>
+</section>
+
+<section class="contatti" id="parliamone">
+  <div class="wrap due">
+    <div class="chiama"><span class="pill">15 minuti</span><h3>Parliamone in videochiamata.</h3><p>Ti mostro il programma dal vivo, rispondo alle tue domande e, se vuoi, lo installiamo insieme. Gratis e senza impegno.</p>
+      <div class="azioni"><a class="btn btn-scuro" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=paolo.campanella1990%40gmail.com&amp;su=Vorrei%20una%20videochiamata%20di%2015%20minuti&amp;body=Buongiorno%2C%0Avorrei%20vedere%20il%20Gestionale%20psicologi%20in%20una%20videochiamata%20di%2015%20minuti.%0A%0ANome%20e%20cognome%3A%0AGiorni%20e%20orari%20in%20cui%20sono%20libera/o%3A%0APreferisco%3A%20Google%20Meet%20/%20WhatsApp%20/%20Zoom%0A%0AGrazie%21" target="_blank" rel="noopener">Prenota con Gmail</a><a class="btn btn-ghost" href="mailto:paolo.campanella1990@gmail.com?subject=Vorrei%20una%20videochiamata%20di%2015%20minuti&amp;body=Buongiorno%2C%0D%0Avorrei%20vedere%20il%20Gestionale%20psicologi%20in%20una%20videochiamata%20di%2015%20minuti.%0D%0A%0D%0ANome%20e%20cognome%3A%0D%0AGiorni%20e%20orari%20in%20cui%20sono%20libera/o%3A%0D%0APreferisco%3A%20Google%20Meet%20/%20WhatsApp%20/%20Zoom%0D%0A%0D%0AGrazie%21">Con il tuo programma di posta</a></div></div>
+    <div class="app"><span class="pill">In arrivo</span><h3>L'app per il telefono.</h3><p>L'agenda e le fatture anche dal telefono, collegato al tuo computer sulla Wi-Fi di casa o dello studio. Nessun cloud: i dati restano tuoi.</p>
+      <div class="azioni"><a class="btn btn-scuro" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=paolo.campanella1990%40gmail.com&amp;su=Avvisami%20quando%20esce%20l%27app%20per%20il%20telefono&amp;body=Buongiorno%2C%0Avorrei%20essere%20avvisata/o%20quando%20esce%20l%27app%20del%20Gestionale%20psicologi%20per%20il%20telefono.%0A%0ANome%20e%20cognome%3A%0AIl%20mio%20telefono%20%C3%A8%3A%20Android%20/%20iPhone%0A%0AGrazie%21" target="_blank" rel="noopener">Avvisami con Gmail</a><a class="btn btn-ghost" href="mailto:paolo.campanella1990@gmail.com?subject=Avvisami%20quando%20esce%20l%27app%20per%20il%20telefono&amp;body=Buongiorno%2C%0D%0Avorrei%20essere%20avvisata/o%20quando%20esce%20l%27app%20del%20Gestionale%20psicologi%20per%20il%20telefono.%0D%0A%0D%0ANome%20e%20cognome%3A%0D%0AIl%20mio%20telefono%20%C3%A8%3A%20Android%20/%20iPhone%0D%0A%0D%0AGrazie%21">Con il tuo programma di posta</a></div></div>
   </div>
 </section>
 
@@ -547,7 +696,7 @@ dialog.scelta .nota a{color:var(--ink);font-weight:600}
   <p class="nota">Usiamo il tuo indirizzo solo per risponderti e mandarti la prova. <a href="privacy.html">Informativa privacy</a></p>
 </dialog>
 
-<footer><div class="wrap">Gestionale psicologi · per psicologi e psicoterapeuti · <a href="privacy.html">Informativa privacy</a><br>I calcoli fiscali sono stime da verificare con il commercialista. Gli invii al Sistema TS avvengono con le credenziali dell'utente.</div></footer>
+<footer><div class="wrap">Gestionale psicologi · per psicologi e psicoterapeuti · <a href="calcolatore.html">Calcolatore</a> · <a href="guida-enpap-2027.html">ENPAP 2027</a> · <a href="guida-sistema-ts.html">Sistema TS</a> · <a href="sicurezza.html">Sicurezza dei dati</a> · <a href="privacy.html">Informativa privacy</a><br>I calcoli fiscali sono stime da verificare con il commercialista. Gli invii al Sistema TS avvengono con le credenziali dell'utente.</div></footer>
 
 <script>
 (() => {
@@ -639,6 +788,6 @@ dialog.scelta .nota a{color:var(--ink);font-weight:600}
   adattaCarta(); costruisciFilo(); misuraGalleria(); aggiorna();
 })();
 </script>
-<script src="comune.js?v=20261113"></script>
+<script src="comune.js?v=20261113b"></script>
 </body>
 </html>

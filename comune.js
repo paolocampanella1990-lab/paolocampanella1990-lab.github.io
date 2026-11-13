@@ -35,6 +35,9 @@
         <a href="funzioni.html"><b>Tutte le funzioni</b><small>Schermata per schermata: cosa fa il programma</small></a>
         <a href="./#dentro"><b>Il programma</b><small>Le schermate che vedrai ogni giorno</small></a>
         <a href="./#storia"><b>Com'è nato</b><small>In uno studio vero, con pazienti veri</small></a>
+        <a href="calcolatore.html"><b>Calcolatore</b><small>Quanto ti resta in tasca con il forfettario</small></a>
+        <a href="./#strumenti"><b>Guide</b><small>ENPAP 2027, marca da bollo, Sistema TS, bonus psicologo</small></a>
+        <a href="sicurezza.html"><b>Sicurezza dei dati</b><small>Dove stanno i dati dei pazienti</small></a>
         <a href="./#domande"><b>Domande frequenti</b><small>Mac, costi, dati, Sistema TS…</small></a>
         <a href="privacy.html"><b>Privacy</b><small>Come trattiamo i tuoi dati</small></a>
       </nav>
