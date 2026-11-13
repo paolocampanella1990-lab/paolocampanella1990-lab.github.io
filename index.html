@@ -390,13 +390,15 @@ dialog.scelta .nota a{color:var(--ink);font-weight:600}
 /* ---------- telefono stretto: niente che sborda di lato ---------- */
 .filo-wrap{overflow-x:clip}
 /* ---------- novità, bollino, prova vera ---------- */
-.novita{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;background:#fff;border:1px solid var(--pesca2);border-radius:999px;padding:7px 16px 7px 8px;font-size:14.5px;color:var(--ink);text-decoration:none;box-shadow:0 8px 22px #ec846622;margin-bottom:6px;transition:transform .2s}
+.novita{display:inline-flex;align-items:center;gap:14px;flex-wrap:wrap;background:#fff;border:1px solid var(--pesca2);border-radius:999px;padding:11px 26px 11px 11px;font-size:15.5px;line-height:1.4;color:var(--ink);text-decoration:none;box-shadow:0 8px 22px #ec846622;margin-bottom:6px;transition:transform .2s}
 .novita:hover{transform:translateY(-2px)}
-.novita b{background:var(--filo);color:#fff;border-radius:999px;padding:3px 10px;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.novita b{background:var(--filo);color:#fff;border-radius:999px;padding:5px 13px;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase}
 .novita span{color:var(--filo2);font-weight:700}
-.badge-store{display:inline-flex;align-items:center;transition:transform .2s}
-.badge-store:hover{transform:translateY(-2px)}
-.badge-store img{height:52px;width:auto;display:block}
+.btn-store{background:var(--ink);color:#fff}
+.btn-store:hover{background:#433d57}
+.btn-store svg{flex:none;width:22px;height:22px}
+.btn-store small{display:block;font-size:11px;font-weight:600;opacity:.75;line-height:1;margin-bottom:2px}
+.btn-store span{display:block;line-height:1.1;text-align:left}
 .vera{display:flex;align-items:center;gap:10px;margin:22px 0 0;color:var(--muted);font-size:15.5px;max-width:620px}
 .vera i{flex:none;width:26px;height:26px;border-radius:50%;background:var(--verde);color:#fff;display:grid;place-items:center;font-style:normal;font-weight:800;font-size:14px}
 .vera b{color:var(--ink)}
@@ -436,13 +438,13 @@ dialog.scelta .nota a{color:var(--ink);font-weight:600}
 .strumenti h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,56px);line-height:1.06;margin:12px 0 8px}
 .strumenti h2 em{color:var(--filo2)}
 .strumenti .testa-s p{color:var(--muted);font-size:18px;margin:0}
-.calc-banda{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:center;background:var(--ink);color:#fff;border-radius:28px;padding:38px 40px;margin-bottom:22px;text-decoration:none;transition:transform .2s}
+.calc-banda{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:center;background:linear-gradient(135deg,var(--lav),var(--cielo));color:var(--ink);border:1px solid var(--lav2);border-radius:28px;padding:38px 40px;margin-bottom:22px;text-decoration:none;transition:transform .2s}
 .calc-banda:hover{transform:translateY(-3px)}
-.calc-banda .eyebrow{color:#cfc6f2}
+.calc-banda .eyebrow{color:var(--viola)}
 .calc-banda h3{font-family:var(--serif);font-weight:400;font-size:clamp(28px,3.4vw,42px);line-height:1.08;margin:8px 0 10px}
-.calc-banda p{color:#ddd8ee;margin:0 0 18px;font-size:16.5px}
-.calc-banda .finto{background:#ffffff12;border-radius:20px;padding:20px 22px}
-.calc-banda .finto small{color:#cfc6f2}
+.calc-banda p{color:var(--muted);margin:0 0 18px;font-size:16.5px}
+.calc-banda .finto{background:#ffffffcc;border-radius:20px;padding:20px 22px;box-shadow:0 14px 30px #7a68b81f}
+.calc-banda .finto small{color:var(--muted)}
 .calc-banda .finto b{display:block;font-family:var(--serif);font-size:48px;font-weight:400;line-height:1.05}
 .calc-banda .finto .bar{display:flex;height:12px;border-radius:7px;overflow:hidden;gap:2px;margin-top:12px}
 .calc-banda .finto .bar i{display:block}
@@ -472,8 +474,8 @@ dialog.scelta .nota a{color:var(--ink);font-weight:600}
 .contatti .pill{display:inline-block;background:#fff;color:var(--viola);border-radius:999px;padding:4px 12px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
 /* telefono: in fondo, così vince sulle regole sopra */
 .nav .btn{white-space:nowrap}
-@media(max-width:560px){.novita{border-radius:18px;font-size:13.5px;line-height:1.4;padding:9px 12px;gap:6px 8px}.novita b{font-size:11px}}
-@media(max-width:430px){.nav{gap:10px}.wrap{padding:0 16px}.logo span{font-size:15px}.nav .btn{display:none}.badge-store img{height:48px}.hero{padding-top:96px}}
+@media(max-width:560px){.novita{border-radius:20px;font-size:14.5px;line-height:1.45;padding:14px 18px;gap:8px 10px}.novita b{font-size:11.5px}}
+@media(max-width:430px){.nav{gap:10px}.wrap{padding:0 16px}.logo span{font-size:15px}.nav .btn{display:none}.hero{padding-top:96px}}
 </style>
 <link rel="stylesheet" href="comune.css?v=20261113b">
 </head>
@@ -505,7 +507,7 @@ dialog.scelta .nota a{color:var(--ink);font-weight:600}
     <p class="sub">Dalla prima seduta all'invio al <b>Sistema Tessera Sanitaria</b>: agenda, fatture, consensi, tasse ed ENPAP in un unico programma. <b>Sul tuo computer</b>, non su un server.</p>
     <div class="cta">
       <a class="btn btn-filo" href="#prova" data-scarica>Scarica gratis</a>
-      <a class="badge-store" href="https://apps.microsoft.com/detail/9P6MGWKBRBKK?hl=it-IT&amp;gl=IT" data-scarica aria-label="Scarica dal Microsoft Store"><img src="microsoft-store.svg" alt="Scarica da Microsoft Store" width="161" height="44"></a>
+      <a class="btn btn-store" href="https://apps.microsoft.com/detail/9P6MGWKBRBKK?hl=it-IT&amp;gl=IT" data-scarica><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8z" fill="#fff" opacity=".95"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" stroke="#fff" stroke-width="1.8" fill="none"/><rect x="8.6" y="11" width="3" height="3" fill="#ec8466"/><rect x="12.4" y="11" width="3" height="3" fill="#7fd1ae"/><rect x="8.6" y="14.8" width="3" height="3" fill="#b7a8ea"/><rect x="12.4" y="14.8" width="3" height="3" fill="#f5d36b"/></svg><span><small>Scarica dal</small>Microsoft Store</span></a>
       <a class="btn btn-ghost" href="#racconto">Segui il filo ↓</a>
     </div>
     <p class="vera"><i>✓</i><span><b>Usato ogni giorno da una psicologa in studio</b> · oltre 100 fatture inviate al Sistema Tessera Sanitaria</span></p>
@@ -632,7 +634,7 @@ dialog.scelta .nota a{color:var(--ink);font-weight:600}
     <div class="testa-s"><span class="eyebrow">Gratis, anche senza il programma</span><h2>Strumenti e <em>guide</em>.</h2><p>Le risposte alle domande che ogni psicologa si fa, scritte in modo semplice.</p></div>
     <a class="calc-banda" href="calcolatore.html">
       <div><span class="eyebrow">Calcolatore del forfettario</span><h3>Quanto ti resta in tasca, al mese?</h3><p>Prezzo della seduta, sedute a settimana, settimane di lavoro: vedi subito quanto va in tasse ed ENPAP (2026 e 2027) e quanto resta a te.</p><span class="vai">Prova il calcolatore →</span></div>
-      <div class="finto"><small>Esempio: 70 € · 15 sedute a settimana</small><b>≈ € 3.380</b><small>al mese nel 2027 (primi 5 anni), tolte tasse ed ENPAP</small><div class="bar"><i style="width:84%;background:#7fd1ae"></i><i style="width:4%;background:#ec8466"></i><i style="width:12%;background:#b7a8ea"></i></div></div>
+      <div class="finto"><small>Esempio: 70 € · 15 sedute a settimana</small><b>≈ € 3.380</b><small>al mese nel 2027 (primi 5 anni), tolte tasse ed ENPAP</small><div class="bar"><i style="width:84%;background:#9ddcbf"></i><i style="width:4%;background:#f4b09b"></i><i style="width:12%;background:#cbbff0"></i></div></div>
     </a>
     <div class="guide">
       <a href="guida-enpap-2027.html"><small>Novità 2027</small><b>ENPAP: cosa cambia con il 4%</b><span>Integrativo in fattura e soggettivo che sale, con gli esempi.</span></a>

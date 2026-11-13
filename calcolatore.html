@@ -205,19 +205,19 @@ footer a{color:var(--ink)}
 .campi select{width:100%;margin-top:8px;padding:10px 12px;border-radius:12px;border:1px solid var(--line);font:inherit;font-size:16px;background:#fff}
 .scelte{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
 .scelte button{flex:1;padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:#fff;font:inherit;font-weight:600;cursor:pointer;color:var(--ink)}
-.scelte button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
-.ris{background:var(--ink);color:#fff;border-radius:22px;padding:24px 24px 22px}
-.ris .eyebrow{color:#cfc6f2}
+.scelte button.on{background:var(--lav);color:var(--ink);border-color:var(--viola);box-shadow:inset 0 0 0 1px var(--viola)}
+.ris{background:linear-gradient(135deg,var(--lav),var(--cielo));color:var(--ink);border:1px solid var(--lav2);border-radius:22px;padding:24px 24px 22px}
+.ris .eyebrow{color:var(--viola)}
 .ris .grande{font-family:var(--serif);font-size:clamp(44px,6vw,64px);line-height:1;margin:8px 0 4px}
-.ris .grande small{font-size:20px;color:#cfc6f2;font-family:var(--sans)}
-.ris p{color:#ddd8ee;margin:0 0 16px;font-size:15px}
-.barra{display:flex;height:16px;border-radius:9px;overflow:hidden;gap:2px;margin:6px 0 16px}
+.ris .grande small{font-size:20px;color:var(--muted);font-family:var(--sans)}
+.ris p{color:var(--muted);margin:0 0 16px;font-size:15px}
+.barra{display:flex;height:16px;border-radius:9px;overflow:hidden;gap:2px;margin:6px 0 16px;background:#fff}
 .barra i{display:block;height:100%}
 .voci{display:grid;gap:8px}
-.voci div{display:flex;justify-content:space-between;gap:10px;font-size:15px;color:#ddd8ee;border-bottom:1px solid #ffffff1f;padding-bottom:7px}
-.voci b{color:#fff;font-weight:600;white-space:nowrap}
+.voci div{display:flex;justify-content:space-between;gap:10px;font-size:15px;color:var(--muted);border-bottom:1px solid #7a68b826;padding-bottom:7px}
+.voci b{color:var(--ink);font-weight:600;white-space:nowrap}
 .voci i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:8px;vertical-align:0}
-.accanto{margin-top:16px;background:#ffffff14;border-radius:14px;padding:12px 14px;font-size:15px;color:#fff}
+.accanto{margin-top:16px;background:#ffffffb3;border-radius:14px;padding:12px 14px;font-size:15px;color:var(--ink)}
 .obiettivo{margin-top:26px;background:var(--burro);border-radius:22px;padding:20px 22px}
 .obiettivo .riga{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:8px}
 .obiettivo input{width:110px;padding:9px 10px;border-radius:12px;border:1px solid #e9d79c;font:inherit;font-size:16px;text-align:right}
@@ -297,7 +297,7 @@ footer a{color:var(--ink)}
     const v = leggi(), r = simula(v.imp * v.set * v.sett), inc = r.onorari + r.cassa;
     $('oMese').innerHTML = eur(r.netto / 12) + ' <small>al mese</small>';
     $('oAnno').textContent = `Su ${eur(inc)} incassati in un anno (${v.set * v.sett} sedute): ${eur(r.netto)} restano a te.`;
-    const parti = [['#7fd1ae', 'Ti resta', r.netto], ['#ec8466', 'Imposta (' + st.aliq + '%)', r.imposta], ['#b7a8ea', 'ENPAP (soggettivo, integrativo, maternità)', r.sogg + r.integr + r.mat]];
+    const parti = [['#9ddcbf', 'Ti resta', r.netto], ['#f4b09b', 'Imposta (' + st.aliq + '%)', r.imposta], ['#cbbff0', 'ENPAP (soggettivo, integrativo, maternità)', r.sogg + r.integr + r.mat]];
     const tot = Math.max(1, parti.reduce((s, p) => s + Math.max(0, p[2]), 0));
     $('oBarra').innerHTML = parti.map(p => `<i style="width:${Math.max(0, p[2]) / tot * 100}%;background:${p[0]}"></i>`).join('');
     $('oVoci').innerHTML = parti.map(p => `<div><span><i style="background:${p[0]}"></i>${p[1]}</span><b>${eur(p[2])}</b></div>`).join('');
